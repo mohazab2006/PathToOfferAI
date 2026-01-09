@@ -1,0 +1,11 @@
+{
+  "name": "John Doe",
+  "city_country": "San Francisco, CA",
+  "email": "john.doe@email.com",
+  "phone": "(555) 123-4567",
+  "linkedin_url": "https://linkedin.com/in/johndoe",
+  "github_url": "https://github.com/johndoe",
+  "portfolio_url": "https://johndoe.dev"
+}
+
+

@@ -1,0 +1,31 @@
+Software Engineer Intern - Summer 2024
+
+TechCorp is looking for a motivated Software Engineer Intern to join our engineering team. You'll work on real-world projects, collaborate with experienced engineers, and contribute to products used by millions of users.
+
+Responsibilities:
+- Develop and maintain web applications using React and Node.js
+- Write clean, maintainable code following best practices
+- Participate in code reviews and team meetings
+- Debug and fix bugs in production systems
+- Collaborate with cross-functional teams including product and design
+- Learn and apply new technologies and frameworks
+
+Requirements:
+- Currently pursuing a Bachelor's or Master's degree in Computer Science or related field
+- Strong programming skills in Python, JavaScript, or Java
+- Experience with web development (HTML, CSS, JavaScript)
+- Familiarity with version control (Git)
+- Strong problem-solving and analytical skills
+- Excellent communication skills
+- Ability to work in a fast-paced environment
+
+Nice to Have:
+- Experience with React, Node.js, or similar frameworks
+- Knowledge of databases (SQL or NoSQL)
+- Experience with cloud platforms (AWS, GCP, Azure)
+- Previous internship or project experience
+- Contributions to open source projects
+
+We offer competitive compensation, mentorship opportunities, and the chance to work on impactful projects.
+
+

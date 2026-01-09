@@ -1,0 +1,57 @@
+JOHN DOE
+Software Engineering Student
+
+San Francisco, CA | john.doe@email.com | (555) 123-4567
+LinkedIn: linkedin.com/in/johndoe | GitHub: github.com/johndoe | Portfolio: johndoe.dev
+
+TECHNICAL SKILLS
+Languages: Python, JavaScript, Java, C++
+Frameworks: React, Node.js, Express
+Tools: Git, Docker, VS Code, Postman
+Databases: PostgreSQL, MongoDB
+
+PROJECTS
+
+E-Commerce Platform
+Tech Stack: React, Node.js, MongoDB, Express
+• Built a full-stack e-commerce application with user authentication and payment processing
+• Implemented RESTful API endpoints handling 1000+ requests per day
+• Designed responsive UI components using React hooks and context API
+
+Task Management App
+Tech Stack: Python, Flask, SQLite
+• Developed a task management web application with CRUD operations
+• Created REST API with Flask and integrated SQLite database
+• Implemented user authentication and session management
+
+Weather Dashboard
+Tech Stack: JavaScript, HTML, CSS, OpenWeather API
+• Built a weather dashboard displaying real-time weather data
+• Fetched data from external APIs and displayed it in an interactive UI
+• Implemented responsive design for mobile and desktop
+
+EXPERIENCE
+
+Software Development Intern | TechStart Inc. | Summer 2023
+• Assisted in developing features for web applications using React
+• Participated in daily standups and code review sessions
+• Fixed bugs and improved application performance
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+State University | Expected May 2025
+Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development
+
+CERTIFICATIONS
+
+AWS Certified Cloud Practitioner
+FreeCodeCamp - JavaScript Algorithms and Data Structures
+
+EXTRACURRICULAR
+
+• Member of Computer Science Club
+• Volunteer tutor for introductory programming courses
+• Organized hackathon event with 50+ participants
+
+
