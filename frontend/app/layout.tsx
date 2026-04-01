@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-gray-50 min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans bg-zinc-50 min-h-screen flex flex-col`}>
         <ToastProvider>
           <ConfirmProvider>
             <Navbar />

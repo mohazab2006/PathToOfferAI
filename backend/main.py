@@ -26,12 +26,28 @@ ensure_default_profile()
 
 app = FastAPI(title="PathToOffer AI API", version="1.0.0")
 
-# CORS middleware
+# CORS: localhost defaults + optional production origins (comma-separated), e.g. https://your-app.vercel.app
+_default_origins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://127.0.0.1:3000",
+]
+_extra = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
+_seen: set[str] = set()
+_cors_origins: list[str] = []
+for o in _default_origins + _extra:
+    if o not in _seen:
+        _seen.add(o)
+        _cors_origins.append(o)
+
+_cors_regex = r"^http://(localhost|127\.0\.0\.1):\d+$"
+if os.getenv("CORS_ALLOW_VERCEL_PREVIEWS", "").lower() in ("1", "true", "yes"):
+    _cors_regex = _cors_regex + r"|^https://([a-zA-Z0-9-]+\.)*vercel\.app$"
+
 app.add_middleware(
     CORSMiddleware,
-    # Allow any localhost port (Next dev may hop ports if 3000 is busy)
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://127.0.0.1:3000"],
-    allow_origin_regex=r"^http://(localhost|127\.0\.0\.1):\d+$",
+    allow_origins=_cors_origins,
+    allow_origin_regex=_cors_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

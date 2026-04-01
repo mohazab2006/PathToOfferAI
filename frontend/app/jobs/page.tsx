@@ -81,12 +81,12 @@ export default function JobsPage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-white border-b border-zinc-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
             <div>
-              <h1 className="font-display text-3xl font-bold text-gray-900">Jobs</h1>
-              <p className="text-gray-600 mt-1">Manage your job applications</p>
+              <h1 className="font-display text-3xl font-bold text-zinc-900 tracking-tight">Jobs</h1>
+              <p className="text-zinc-600 mt-1 text-[15px]">Manage your applications</p>
             </div>
             <Link href="/jobs/new" className="btn-primary inline-flex items-center gap-2">
               <Plus className="w-5 h-5" />
@@ -148,7 +148,7 @@ export default function JobsPage() {
             {filteredJobs.map((job) => (
               <div
                 key={job.id}
-                className="card hover:border-primary-300 transition-all group"
+                className="card group"
               >
                 <Link href={`/jobs/${job.id}`} className="block">
                   <div className="flex justify-between items-start">
@@ -164,7 +164,7 @@ export default function JobsPage() {
                           {job.status}
                         </span>
                         {job.tags && job.tags.includes('demo') && (
-                          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
+                          <span className="px-3 py-1 bg-zinc-100 text-zinc-700 text-sm font-medium rounded-full border border-zinc-200">
                             Demo
                           </span>
                         )}

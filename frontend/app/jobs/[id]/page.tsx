@@ -311,9 +311,9 @@ function OverviewTab({ job, analysis, jdText, setJdText, onAnalyzeJD, onScoreRes
                   {analysis.score_breakdown.final_score || 0}/100
                 </span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3">
+              <div className="w-full bg-zinc-200 rounded-full h-3 overflow-hidden">
                 <div
-                  className="bg-gradient-to-r from-primary-600 to-primary-700 h-3 rounded-full transition-all"
+                  className="bg-primary-600 h-3 rounded-full transition-all duration-300"
                   style={{ width: `${analysis.score_breakdown.final_score || 0}%` }}
                 />
               </div>
@@ -482,7 +482,7 @@ function ResumeTab({ jobId, isDemo, analysis, setActiveTab }: { jobId: number; i
 
           {/* Resume Improvements */}
           {topFixes.length > 0 && (
-            <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <div className="p-4 bg-primary-50 rounded-lg border border-primary-200/80">
               <h3 className="font-semibold text-gray-900 mb-2">Resume Improvements</h3>
               <p className="text-sm text-gray-600 mb-3">
                 Based on your ATS score, here are the highest-impact edits to make.
@@ -575,7 +575,7 @@ function ResumeTab({ jobId, isDemo, analysis, setActiveTab }: { jobId: number; i
           </div>
 
           {/* Workflow tip */}
-          <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
+          <div className="p-3 bg-zinc-100 border border-zinc-200 rounded-lg text-sm text-zinc-800">
             <strong>Tip:</strong> Check the <span className="font-medium">Gaps</span> tab first to see what's missing, 
             then either click "Generate Optimized Version" above or download your resume, edit it manually, and re-upload.
           </div>
@@ -1018,11 +1018,11 @@ function GapsTab({ jobId, analysis, setActiveTab }: { jobId: number; analysis: a
           <h2 className="font-display text-xl font-semibold mb-4">Recommended Fixes</h2>
           <div className="space-y-4">
             {topFixes.map((fix: any, i: number) => (
-              <div key={i} className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+              <div key={i} className="p-4 bg-primary-50 rounded-lg border border-primary-200/80">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-semibold text-gray-900">Fix #{i + 1}</h3>
                   {fix.expected_score_impact && (
-                    <span className="text-sm text-blue-700 font-medium">
+                    <span className="text-sm text-primary-800 font-medium">
                       +{formatImpact(fix.expected_score_impact)}
                     </span>
                   )}

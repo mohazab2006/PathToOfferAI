@@ -18,27 +18,19 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white border-b border-zinc-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex items-center gap-2 group"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 rounded-lg blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
-              <div className="relative bg-gradient-to-r from-primary-600 to-purple-600 p-1.5 rounded-lg">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-            </div>
-            <span className="font-display text-xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent group-hover:from-primary-700 group-hover:to-purple-700 transition-all">
+        <div className="flex justify-between items-center h-14 sm:h-16">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-600 text-white shadow-sm ring-1 ring-primary-700/20 group-hover:bg-primary-700 transition-colors">
+              <Sparkles className="w-[18px] h-[18px]" aria-hidden />
+            </span>
+            <span className="font-display text-lg sm:text-xl font-semibold text-zinc-900 tracking-tight">
               PathToOffer AI
             </span>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-0.5">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = pathname?.startsWith(item.href)
@@ -46,26 +38,24 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-gradient-to-r from-primary-50 to-purple-50 text-primary-700'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      ? 'bg-primary-50 text-primary-800'
+                      : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100/80'
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-primary-600' : ''}`} />
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-primary-600' : 'text-zinc-500'}`} />
                   <span>{item.label}</span>
-                  {isActive && (
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary-600 rounded-full"></div>
-                  )}
                 </Link>
               )
             })}
           </div>
 
-          {/* Mobile menu button */}
           <button
+            type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 text-zinc-600 hover:text-zinc-900 rounded-lg hover:bg-zinc-100 transition-colors"
+            aria-expanded={mobileMenuOpen}
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,9 +68,8 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 animate-in slide-in-from-top">
+          <div className="md:hidden py-3 border-t border-zinc-100 animate-in">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = pathname?.startsWith(item.href)
@@ -89,10 +78,10 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-primary-50 text-primary-700'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      ? 'bg-primary-50 text-primary-800'
+                      : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50'
                   }`}
                 >
                   <Icon className="w-5 h-5" />

@@ -47,14 +47,14 @@ export function ConfirmProvider({ children }: { children: React.ReactNode }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6">
-              <h3 className="font-display text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="font-display text-xl font-semibold text-zinc-900 mb-2">
                 {opts.title || 'Confirm'}
               </h3>
-              <p className="text-gray-600 mb-6">{opts.message}</p>
+              <p className="text-zinc-600 mb-6 text-[15px] leading-relaxed">{opts.message}</p>
               <div className="flex gap-3 justify-end">
                 <button
                   onClick={() => close(false)}
-                  className="px-4 py-2 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+                  className="px-4 py-2 text-zinc-700 font-medium rounded-lg hover:bg-zinc-100 transition-colors"
                 >
                   {opts.cancelText || 'Cancel'}
                 </button>
@@ -63,7 +63,7 @@ export function ConfirmProvider({ children }: { children: React.ReactNode }) {
                   className={
                     opts.tone === 'danger'
                       ? 'px-4 py-2 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors'
-                      : 'px-4 py-2 bg-gray-900 text-white font-medium rounded-lg hover:bg-black transition-colors'
+                      : 'px-4 py-2 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors'
                   }
                 >
                   {opts.confirmText || 'Confirm'}

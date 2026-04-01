@@ -116,9 +116,9 @@ export default function CodingPage() {
   }
 
   const difficultyColors = {
-    easy: 'bg-green-100 text-green-700 border-green-300',
-    medium: 'bg-yellow-100 text-yellow-700 border-yellow-300',
-    hard: 'bg-red-100 text-red-700 border-red-300',
+    easy: 'bg-primary-50 text-primary-900 border-primary-200',
+    medium: 'bg-zinc-100 text-zinc-800 border-zinc-200',
+    hard: 'bg-zinc-200 text-zinc-900 border-zinc-300',
   }
 
   return (
@@ -343,18 +343,18 @@ export default function CodingPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Complexity Analysis</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {review.time_complexity && (
-                    <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <div className="p-3 bg-zinc-100 rounded-lg border border-zinc-200">
                       <div className="flex items-center gap-2 mb-1">
-                        <TrendingUp className="w-4 h-4 text-blue-600" />
+                        <TrendingUp className="w-4 h-4 text-zinc-600" />
                         <span className="text-sm font-semibold text-gray-700">Time</span>
                       </div>
                       <p className="text-sm text-gray-600">{review.time_complexity}</p>
                     </div>
                   )}
                   {review.space_complexity && (
-                    <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+                    <div className="p-3 bg-zinc-100 rounded-lg border border-zinc-200">
                       <div className="flex items-center gap-2 mb-1">
-                        <TrendingDown className="w-4 h-4 text-purple-600" />
+                        <TrendingDown className="w-4 h-4 text-zinc-600" />
                         <span className="text-sm font-semibold text-gray-700">Space</span>
                       </div>
                       <p className="text-sm text-gray-600">{review.space_complexity}</p>

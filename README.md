@@ -1,6 +1,6 @@
 # PathToOffer AI
 
-A job application tool that helps you tailor your resume, prep for interviews, and stop guessing if your application is any good.
+A job application tool that helps you tailor your resume, prep for interviews, and stop guessing if your application is any good. It’s meant to **run locally** when you want to try it out.
 
 ## The Problem
 
@@ -25,8 +25,9 @@ You'll need Python 3.11+ and Node.js 18+.
 cd backend
 pip install -r requirements.txt
 
-# Create backend/.env with your OpenAI key:
+# Create a .env in the project root (not backend/) with your OpenAI key:
 # OPENAI_API_KEY=sk-...
+# See .env.example for optional variables.
 
 # Frontend  
 cd frontend
@@ -96,19 +97,11 @@ SQLite database lives at `path_to_offer.db` in the root. Uploaded resumes go in 
 
 The AI stuff can be slow on first run since it's hitting GPT-4o. Subsequent loads are faster because results get cached.
 
-## Future Plans
+## Future plans
 
-Right now it runs locally. Eventually I want to deploy it properly:
+Docker for the API, Postgres instead of SQLite, auth for multi-user use.
 
-- Dockerize both frontend and backend for easier deployment
-- Backend on Railway or Render (FastAPI plays nice with both)
-- Frontend on Vercel
-- Swap SQLite for Postgres
-- Add user auth so multiple people can use it
-
-Not there yet, but the architecture is set up to make that switch pretty straightforward.
-
-ant---
+---
 
 Built because job hunting is tedious and I wanted something to make it less painful.
 

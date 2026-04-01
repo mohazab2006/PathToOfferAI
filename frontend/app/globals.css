@@ -6,36 +6,43 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+    @apply bg-zinc-50 text-zinc-900 font-sans antialiased;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center gap-2 bg-primary-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-sm border border-primary-700/10 hover:bg-primary-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 transition-colors duration-150 disabled:opacity-50 disabled:pointer-events-none;
   }
-  
+
   .btn-secondary {
-    @apply bg-white text-gray-700 font-medium px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 hover:bg-gray-50;
+    @apply inline-flex items-center justify-center gap-2 bg-white text-zinc-800 font-medium px-5 py-2.5 rounded-lg border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:border-zinc-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 transition-colors duration-150;
   }
-  
+
   .card {
-    @apply bg-white rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow;
+    @apply bg-white rounded-xl border border-zinc-200/90 shadow-sm p-6 transition-shadow duration-150 hover:shadow-md hover:border-zinc-300/80;
   }
 
-  /* Grid pattern background */
-  .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
   }
 
-  /* Animation utilities */
+  .page-title {
+    @apply font-display text-3xl font-bold text-zinc-900 tracking-tight;
+  }
+
+  .page-subtitle {
+    @apply text-zinc-600 mt-1 text-[15px] leading-relaxed;
+  }
+
+  .field-input {
+    @apply w-full px-4 py-2.5 rounded-lg border border-zinc-200 bg-white text-zinc-900 placeholder:text-zinc-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-shadow;
+  }
+
   @keyframes slide-in-from-top {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(-8px);
     }
     to {
       opacity: 1;
@@ -47,4 +54,3 @@
     animation: slide-in-from-top 0.2s ease-out;
   }
 }
-

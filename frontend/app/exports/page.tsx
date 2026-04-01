@@ -106,28 +106,24 @@ export default function ExportsPage() {
       title: 'Resume PDF',
       description: 'Download your optimized resume as a one-page ATS-safe PDF',
       icon: FileText,
-      color: 'from-blue-500 to-cyan-500',
     },
     {
       id: 'cover-letter',
       title: 'Cover Letter PDF',
       description: 'Download your tailored cover letter as a professional PDF',
       icon: Briefcase,
-      color: 'from-green-500 to-emerald-500',
     },
     {
       id: 'interview-pack',
       title: 'Interview Pack PDF',
       description: 'Download interview preparation materials and questions',
       icon: FileText,
-      color: 'from-purple-500 to-pink-500',
     },
     {
       id: 'package',
       title: 'Complete Package (ZIP)',
       description: 'Download all application materials in a single ZIP file',
       icon: FileArchive,
-      color: 'from-orange-500 to-red-500',
     },
   ]
 
@@ -135,8 +131,8 @@ export default function ExportsPage() {
     <div className="min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="font-display text-3xl font-bold text-gray-900">Exports</h1>
-          <p className="text-gray-600 mt-1">Download your resumes, cover letters, and application packs</p>
+          <h1 className="font-display text-3xl font-bold text-zinc-900 tracking-tight">Exports</h1>
+          <p className="text-zinc-600 mt-1 text-[15px]">Download resumes, cover letters, and application packs</p>
         </div>
 
         {/* Job Selection */}
@@ -180,10 +176,10 @@ export default function ExportsPage() {
             return (
               <div
                 key={option.id}
-                className="card hover:border-primary-300 transition-all"
+                className="card"
               >
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br ${option.color} mb-4`}>
-                  <Icon className="w-6 h-6 text-white" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 bg-primary-100 text-primary-800 ring-1 ring-primary-200/80">
+                  <Icon className="w-6 h-6" />
                 </div>
                 
                 <h3 className="font-display text-lg font-semibold text-gray-900 mb-2">
@@ -216,8 +212,8 @@ export default function ExportsPage() {
         </div>
 
         {/* Info */}
-        <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-          <p className="text-sm text-blue-800">
+        <div className="mt-6 p-4 bg-zinc-100 rounded-lg border border-zinc-200">
+          <p className="text-sm text-zinc-700 leading-relaxed">
             <strong>Note:</strong> All exports are ATS-safe and optimized for applicant tracking systems. 
             Resume and cover letter PDFs are limited to one page for maximum impact.
           </p>

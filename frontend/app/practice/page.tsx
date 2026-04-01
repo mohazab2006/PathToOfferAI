@@ -257,14 +257,14 @@ export default function PracticePage() {
             <h2 className="font-display text-xl font-semibold mb-4">Feedback</h2>
             
             {/* Overall Score */}
-            <div className="mb-6 p-4 bg-gradient-to-r from-primary-50 to-purple-50 rounded-lg border border-primary-200">
+            <div className="mb-6 p-4 bg-primary-50 rounded-lg border border-primary-200/80">
               <div className="flex justify-between items-center mb-2">
-                <span className="font-semibold text-gray-900">Overall Score</span>
+                <span className="font-semibold text-zinc-900">Overall Score</span>
                 <span className="text-3xl font-bold text-primary-600">{score.total_score}/100</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-3">
+              <div className="w-full bg-zinc-200 rounded-full h-3 overflow-hidden">
                 <div
-                  className="bg-gradient-to-r from-primary-600 to-primary-700 h-3 rounded-full transition-all"
+                  className="bg-primary-600 h-3 rounded-full transition-all duration-300"
                   style={{ width: `${score.total_score}%` }}
                 />
               </div>
