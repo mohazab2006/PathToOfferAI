@@ -1,6 +1,6 @@
 # PathToOffer AI
 
-A job application tool that helps you tailor your resume, prep for interviews, and stop guessing if your application is any good. It’s meant to **run locally** when you want to try it out.
+A job application tool that helps you tailor your resume, prep for interviews, and stop guessing if your application is any good.
 
 ## The Problem
 
